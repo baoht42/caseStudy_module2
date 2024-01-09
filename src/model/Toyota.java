@@ -26,4 +26,11 @@ public class Toyota extends Cars{
         else
             return 0;
     }
+
+    @Override
+    public String toString() {
+        return "Toyota{" +
+                "dayRent=" + dayRent +
+                '}';
+    }
 }
