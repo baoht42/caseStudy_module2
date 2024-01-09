@@ -1,4 +1,4 @@
-package model;
+package model.Car;
 
 public abstract class Cars {
     private String idCar;

@@ -1,27 +1,27 @@
-package model;
+package model.Car;
 
-public class Toyota extends Cars{
+public class Mercedes extends Cars{
     private int dayRent = 0;
 
-    public Toyota(String idCar, String nameCar, double cost, int seatOfCar, int dayRent) {
+    public Mercedes(String idCar, String nameCar, double cost, int seatOfCar, int rentDay) {
         super(idCar, nameCar, cost, seatOfCar);
-        this.dayRent = dayRent;
+        this.dayRent = rentDay;
     }
 
-    public Toyota(int dayRent) {
-        this.dayRent = dayRent;
+    public Mercedes(int rentDay) {
+        this.dayRent = rentDay;
     }
-    public Toyota() {
+    public Mercedes() {
 
     }
 
     @Override
     public double getPrice() {
         if (getSeatOfCar()==4){
-            return getCost()*dayRent;
+            return getCost()*dayRent + 400;
         }
         if (getSeatOfCar()>4 && getSeatOfCar()<7){
-            return getCost()*dayRent + 200;
+            return getCost()*dayRent + 700;
         }
         else
             return 0;
@@ -29,7 +29,7 @@ public class Toyota extends Cars{
 
     @Override
     public String toString() {
-        return "Toyota{" +
+        return "Mercedes{" +
                 "dayRent=" + dayRent +
                 '}';
     }

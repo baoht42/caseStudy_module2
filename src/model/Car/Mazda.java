@@ -1,4 +1,4 @@
-package model;
+package model.Car;
 
 public class Mazda extends Cars{
     private int dayRent = 0;
