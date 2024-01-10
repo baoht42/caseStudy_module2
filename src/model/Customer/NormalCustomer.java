@@ -1,13 +1,12 @@
 package model.Customer;
-import model.Car.Cars;
 
-public class VipCustomer extends Customer implements realPayment {
+public class NormalCustomer extends Customer implements realPayment {
 
-    public VipCustomer(String name, String idCustomer, String phoneNumber, int pointMember) {
+    public NormalCustomer(String name, String idCustomer, String phoneNumber, int pointMember) {
         super(name, idCustomer, phoneNumber, pointMember);
     }
 
-    public VipCustomer() {
+    public NormalCustomer() {
     }
 
     @Override
@@ -22,7 +21,7 @@ public class VipCustomer extends Customer implements realPayment {
 
     @Override
     public String toString() {
-        return "VipCustomer{" +
+        return "NormalCustomer{" +
                 "pointMember=" + pointMember +
                 '}';
     }

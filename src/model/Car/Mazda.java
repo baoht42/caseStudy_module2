@@ -1,6 +1,6 @@
 package model.Car;
 
-public class Mazda extends Cars{
+public class Mazda extends Cars implements getPrice{
     private int dayRent = 0;
 
     public Mazda(String idCar, String nameCar, double cost, int seatOfCar, int dayRent) {
