@@ -38,11 +38,11 @@ public class Mazda extends Cars implements getRealPrice {
     @Override
     public String toString() {
         return "Mazda{" +
-                "dayRent=" + dayRent +
-                "idCar= " + getIdCar() +
-                "nameCar= " + getNameCar()+
-                "cost= " + getCost() +
-                "seat= " + getSeatOfCar()+
+                "dayRent= " + dayRent +
+                " idCar= " + getIdCar() +
+                " nameCar= " + getNameCar()+
+                " cost= " + getCost() +
+                " seat= " + getSeatOfCar()+
                 '}';
     }
 

@@ -40,6 +40,7 @@ public class Main {
         }
 
     }
+
     public static void displayMenu(){
         Scanner sc9 = new Scanner(System.in);
         System.out.println("1. Manage Car");
@@ -49,51 +50,16 @@ public class Main {
         switch (choiceManage){
             case 1:
                 MenuCar.displayMenuCar();
+                System.out.println(ManageCar.carList);
                 break;
             case 2:
                 break;
             case 3:
                 System.exit(0);
+                break;
             default:
                 System.out.println("Invalid choice!");
         }
     }
-    private static Cars addCar() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Nhap id cua xe: ");
-        String idCar = sc.nextLine();
-        System.out.println("Nhap ten cua xe: ");
-        String nameCar = sc.nextLine();
-        System.out.println("Nhap gia tien de thue xe: ");
-        int cost = sc.nextInt();
-        System.out.println("Nhap so cho cua xe: ");
-        int seat = sc.nextInt();
-        System.out.println("1. Xe hang Toyota");
-        System.out.println("2. Xe hang Mazda");
-        System.out.println("3. Xe hang Mercedes");
-        int choiceCar = sc.nextInt();
-        switch (choiceCar){
-            case 1:
-                Scanner sc1 = new Scanner(System.in);
-                System.out.println("Nhap so ngay xe duoc thue: ");
-                int dayRent = sc1.nextInt();
-                Toyota a = new Toyota(idCar,nameCar,cost,seat,dayRent);
 
-                return new Toyota(idCar, nameCar, cost, seat, dayRent);
-            case 2:
-                Scanner sc2 = new Scanner(System.in);
-                System.out.println("Nhap so ngay xe duoc thue: ");
-                int dayRent2 = sc2.nextInt();
-                return new Mazda(idCar,nameCar,cost,seat,dayRent2);
-
-            case 3:
-                Scanner sc3 = new Scanner(System.in);
-                System.out.println("Nhap so ngay xe duoc thue: ");
-                int dayRent3 = sc3.nextInt();
-                return new Mercedes(idCar, nameCar, cost,seat,dayRent3);
-            default:
-                return null;
-        }
-
-    }
 }

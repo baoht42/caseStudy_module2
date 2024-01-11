@@ -22,8 +22,12 @@ public class ManageCar {
         carList.add(car);
     }
 
-    public void deleteCar(Cars car) {
-        this.carList.remove(car);
+    public static void deleteCar(String idCar ) {
+        for (int i = 0; i < carList.size(); i++) {
+            if (carList.get(i).getIdCar().equals(idCar)){
+                carList.remove(carList.get(i));
+            }
+        }
     }
 
     public void updateCar(Cars car) {

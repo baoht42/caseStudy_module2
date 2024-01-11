@@ -30,11 +30,11 @@ public class Toyota extends Cars implements getRealPrice {
     @Override
     public String toString() {
         return "Toyota{" +
-                "dayRent= " + dayRent +
-                "idCar= " + getIdCar() +
-                "nameCar= " + getNameCar()+
-                "cost= " + getCost() +
-                "seat= " + getSeatOfCar()+
+                " dayRent= " + dayRent +
+                " idCar= " + getIdCar() +
+                " nameCar= " + getNameCar()+
+                " cost= " + getCost() +
+                " seat= " + getSeatOfCar()+
                 '}';
     }
 
