@@ -1,4 +1,4 @@
-package model.Customer;
+package model.customer;
 
 public abstract class Customer {
     private String name;

@@ -1,6 +1,6 @@
-package model.Car;
+package model.car;
 
-public class Mercedes extends Cars implements getPrice{
+public class Mercedes extends Cars implements getRealPrice {
     private int dayRent = 0;
 
     public Mercedes(String idCar, String nameCar, double cost, int seatOfCar, int rentDay) {
@@ -31,6 +31,19 @@ public class Mercedes extends Cars implements getPrice{
     public String toString() {
         return "Mercedes{" +
                 "dayRent=" + dayRent +
+                "idCar= " + getIdCar() +
+                "nameCar= " + getNameCar()+
+                "cost= " + getCost() +
+                "seat= " + getSeatOfCar()+
                 '}';
+    }
+
+    @Override
+    public double getRealPrice() {
+        if(dayRent>10){
+            return getPrice()*0.02;
+        }else {
+            return getPrice();
+        }
     }
 }

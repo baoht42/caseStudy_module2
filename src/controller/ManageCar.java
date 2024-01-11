@@ -1,34 +1,35 @@
 package controller;
 
-import model.Car.Cars;
+import model.car.Cars;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ManageCar {
-    private ArrayList<Cars> carsList;
-    public ManageCar(){
-        this.carsList = new ArrayList<Cars>();
-    }
-    public ManageCar(ArrayList<Cars> carsList){
-        this.carsList = carsList;
+
+    public static List<Cars> carList = new ArrayList<>();
+
+    public ManageCar() {
+        this.carList = new ArrayList<>();
     }
 
-    public ArrayList<Cars> getCarsList() {
-        return carsList;
+    public List<Cars> getCarList() {
+        return carList;
     }
 
-    public void setCarsList(ArrayList<Cars> carsList) {
-        this.carsList = carsList;
-    }
-    public void addCar(Cars car){
-        this.carsList.add(car);
-    }
-    public void deleteCar(Cars car){
-        this.carsList.remove(car);
-    }
-    public void updateCar(Cars car){
-        this.carsList.remove(car);
-        this.carsList.add(car);
+
+    public static void addCar(Cars car) {
+        carList.add(car);
     }
 
+    public void deleteCar(Cars car) {
+        this.carList.remove(car);
+    }
+
+    public void updateCar(Cars car) {
+        int index = this.carList.indexOf(car);
+        if (index != -1) {
+            this.carList.set(index, car);
+        }
+    }
 }

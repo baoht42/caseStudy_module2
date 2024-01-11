@@ -1,7 +1,6 @@
 package controller;
 
-import model.Car.Cars;
-import model.Customer.Customer;
+import model.customer.Customer;
 
 import java.util.ArrayList;
 

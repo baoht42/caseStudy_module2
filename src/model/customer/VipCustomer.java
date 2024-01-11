@@ -1,12 +1,12 @@
-package model.Customer;
+package model.customer;
 
-public class NormalCustomer extends Customer implements realPayment {
+public class VipCustomer extends Customer implements realPayment {
 
-    public NormalCustomer(String name, String idCustomer, String phoneNumber, int pointMember) {
+    public VipCustomer(String name, String idCustomer, String phoneNumber, int pointMember) {
         super(name, idCustomer, phoneNumber, pointMember);
     }
 
-    public NormalCustomer() {
+    public VipCustomer() {
     }
 
     @Override
@@ -21,7 +21,7 @@ public class NormalCustomer extends Customer implements realPayment {
 
     @Override
     public String toString() {
-        return "NormalCustomer{" +
+        return "VipCustomer{" +
                 "pointMember=" + pointMember +
                 '}';
     }
