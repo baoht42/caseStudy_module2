@@ -15,6 +15,14 @@ public class Mercedes extends Cars implements getRealPrice {
 
     }
 
+    public int getDayRent() {
+        return dayRent;
+    }
+
+    public void setDayRent(int dayRent) {
+        this.dayRent = dayRent;
+    }
+
     @Override
     public double getPrice() {
         if (getSeatOfCar()==4){
@@ -33,9 +41,9 @@ public class Mercedes extends Cars implements getRealPrice {
                 " dayRent=" + dayRent +
                 " idCar= " + getIdCar() +
                 " nameCar= " + getNameCar()+
-                " cost= " + getCost() +
+                " cost= " + getCost() + "$"+
                 " seat= " + getSeatOfCar()+
-                '}';
+                '}'+"\n";
     }
 
     @Override

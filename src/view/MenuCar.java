@@ -32,6 +32,12 @@ public class MenuCar {
                     ManageCar.deleteCar(id);
                     System.out.println(ManageCar.carList);
                     break;
+                case 3:
+                    String idToUpdate = CarMethod.updateByID();
+                    ManageCar.updateCar(idToUpdate);
+                    // Hiển thị danh sách sau khi cập nhật
+                    System.out.println(ManageCar.carList);
+                    break;
             }
         }
     }

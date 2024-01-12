@@ -8,11 +8,20 @@ public class Toyota extends Cars implements getRealPrice {
         this.dayRent = dayRent;
     }
 
+
     public Toyota(int dayRent) {
         this.dayRent = dayRent;
     }
     public Toyota() {
 
+    }
+
+    public int getDayRent() {
+        return dayRent;
+    }
+
+    public void setDayRent(int dayRent) {
+        this.dayRent = dayRent;
     }
 
     @Override
@@ -33,9 +42,9 @@ public class Toyota extends Cars implements getRealPrice {
                 " dayRent= " + dayRent +
                 " idCar= " + getIdCar() +
                 " nameCar= " + getNameCar()+
-                " cost= " + getCost() +
+                " cost= " + getCost() + "$"+
                 " seat= " + getSeatOfCar()+
-                '}';
+                '}'+"\n";
     }
 
     @Override

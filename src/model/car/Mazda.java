@@ -41,9 +41,9 @@ public class Mazda extends Cars implements getRealPrice {
                 "dayRent= " + dayRent +
                 " idCar= " + getIdCar() +
                 " nameCar= " + getNameCar()+
-                " cost= " + getCost() +
+                " cost= " + getCost() + "$"+
                 " seat= " + getSeatOfCar()+
-                '}';
+                '}'+"\n";
     }
 
     @Override

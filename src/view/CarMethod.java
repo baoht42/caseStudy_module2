@@ -53,6 +53,26 @@ public class CarMethod {
         return idToDelete;
 
     }
+    public static String updateByID() {
+        Scanner sc14 = new Scanner(System.in);
+        System.out.println("Nhap id xe muon sua thong tin: ");
+        String idToUpdate = sc14.nextLine();
+        return idToUpdate;
+    }
+    public static void displayCarDetails(Cars car) {
+        System.out.println("Thong tin xe:");
+        System.out.println("ID: " + car.getIdCar());
+        System.out.println("Ten: " + car.getNameCar());
+        System.out.println("Gia thue: " + car.getCost());
+        System.out.println("So cho: " + car.getSeatOfCar());
+        if (car instanceof Toyota) {
+            System.out.println("So ngay thue (Toyota): " + ((Toyota) car).getDayRent());
+        } else if (car instanceof Mazda) {
+            System.out.println("So ngay thue (Mazda): " + ((Mazda) car).getDayRent());
+        } else if (car instanceof Mercedes) {
+            System.out.println("So ngay thue (Mercedes): " + ((Mercedes) car).getDayRent());
+        }
+    }
 
 
 
